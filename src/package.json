@@ -1,0 +1,14 @@
+{
+  "name": "@hellocoop/client",
+  "private": false,
+  "engines": {
+    "node": "~20",
+    "npm": "~10"
+  },
+  "dependencies": {
+    "@hellocoop/fastify": "latest"
+  },
+  "scripts": {
+    "start": "node ./server.js"
+  }
+}

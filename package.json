@@ -1,0 +1,39 @@
+{
+  "name": "@hellocoop/client",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Hellō Client",
+  "engines": {
+    "node": "~20",
+    "npm": "~10"
+  },
+  "files": [
+    "src",
+    "package.json",
+    "package-lock.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "mockin": "src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellocoop/client-docker.git"
+  },
+  "author": {
+    "name": "Hello Identity Co-op",
+    "email": "contact@hello.coop",
+    "url": "https://hello.coop"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hellocoop/client-docker/issues"
+  },
+  "homepage": "https://www.hello.dev/docs/docker",
+  "scripts": {
+    "install": "cd test/playwright && npm i && npx playwright install",
+    "test": "cd test && docker-compose up --build -d && cd playwright && npx playwright test && docker-compose down",
+    "release": "./scripts/release.sh"
+  }
+}
