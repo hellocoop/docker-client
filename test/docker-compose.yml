@@ -1,4 +1,4 @@
-# base file -- will not run by itself -- must be extended with either docker-compose.dev.yml or docker-compose.local.yml
+# docker compose for running tests
 
 version: '3.8'
 
