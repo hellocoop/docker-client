@@ -38,9 +38,13 @@ const loginTrigger = async ( params ) => {
             console.error('Login trigger failed', response.status, response.statusText)
             return {}
         }
-        const json = await response.json()
-        console.log('loginTrigger response', json)
-        return json
+        try {
+            const json = await response.json()
+            console.log('loginTrigger response', json)
+            return json    
+        } catch (err) {
+            console.error('Login trigger did not return JSON', err)
+        }
     } catch (err) {
         console.error('Login trigger failed', err)
     }
