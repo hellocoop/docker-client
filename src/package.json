@@ -9,6 +9,7 @@
     "@hellocoop/fastify": "latest"
   },
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "debug": "node --inspect-brk=0.0.0.0 ./server.js"
   }
 }
